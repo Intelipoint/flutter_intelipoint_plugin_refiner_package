@@ -1,7 +1,8 @@
+// ignore_for_file: depend_on_referenced_packages
+
 import 'package:flutter/material.dart';
 import 'dart:async';
 
-import 'package:flutter/services.dart';
 import 'package:refiner_package/model/refiner_user_model.dart';
 import 'package:refiner_package/refiner_package.dart';
 

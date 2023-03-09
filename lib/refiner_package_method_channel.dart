@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
-import 'package:refiner_package/model/refiner_user_model.dart';
+import 'model/refiner_user_model.dart';
 
 import 'refiner_package_platform_interface.dart';
 

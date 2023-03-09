@@ -1,4 +1,4 @@
-# refiner_package
+# intelipoint_flutter_package_refiner
 
 A new Flutter plugin project.
 

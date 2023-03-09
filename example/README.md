@@ -1,6 +1,6 @@
-# refiner_package_example
+# intelipoint_flutter_package_refiner_example
 
-Demonstrates how to use the refiner_package plugin.
+Demonstrates how to use the intelipoint_flutter_package_refiner plugin.
 
 ## Getting Started
 
