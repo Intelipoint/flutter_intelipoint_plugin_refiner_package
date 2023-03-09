@@ -3,7 +3,7 @@
 # Run `pod lib lint refiner_package.podspec` to validate before publishing.
 #
 Pod::Spec.new do |s|
-  s.name             = 'intelipoint_flutter_package_refiner'
+  s.name             = 'refiner_package'
   s.version          = '0.0.1'
   s.summary          = 'A new Flutter plugin project.'
   s.description      = <<-DESC
