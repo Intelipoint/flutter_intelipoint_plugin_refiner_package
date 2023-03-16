@@ -16,14 +16,14 @@ import io.flutter.plugin.common.PluginRegistry.Registrar
 class RefinerPackagePlugin: FlutterPlugin, MethodCallHandler, ActivityAware {
   private lateinit var channel : MethodChannel
   private lateinit var context: Context
-  private lateinit var activity: Activity
+  private var activity: Activity? = null;
 
     override fun onDetachedFromActivity() {
-        TODO("Not yet implemented")
+        activity = null;
     }
 
     override fun onReattachedToActivityForConfigChanges(binding: ActivityPluginBinding) {
-        TODO("Not yet implemented")
+        activity = binding.activity;
     }
 
     override fun onAttachedToActivity(binding: ActivityPluginBinding) {
@@ -31,7 +31,7 @@ class RefinerPackagePlugin: FlutterPlugin, MethodCallHandler, ActivityAware {
     }
 
     override fun onDetachedFromActivityForConfigChanges() {
-        TODO("Not yet implemented")
+        activity = null;
     }
 
     // companion object {
