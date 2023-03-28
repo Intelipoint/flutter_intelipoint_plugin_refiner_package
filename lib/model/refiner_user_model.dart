@@ -7,4 +7,12 @@ class RefinerUser {
   Map<String, dynamic> toJson() {
     return {'userId': userId, 'userTraits': userTraits};
   }
+
+  Map<String, String> toWebAppJson() {
+    Map<String, String> usr = {};
+    userTraits!.forEach((key, value) => usr[key] = value.toString());
+    usr['id'] = userId!;
+
+    return usr;
+  }
 }

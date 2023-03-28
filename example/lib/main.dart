@@ -27,8 +27,8 @@ class _MyAppState extends State<MyApp> {
   Future<void> initRefiner() async {
     RefinerUser user = RefinerUser(userId: 'YOUR_CUSTOM_USER_ID', userTraits: {'email': 'YOUR_CUSTOM_TRAITS'});
     try {
-      await RefinerPackage.initRefiner(projectId: 'YOUR_PROJECT_ID');
-      await RefinerPackage.identifyUser(user: user);
+      RefinerPackage.initRefiner(projectId: 'YOUR_PROJECT_ID');
+      RefinerPackage.identifyUser(user: user);
     } on Exception {
       throw Exception('Failed to init Refiner');
     }
