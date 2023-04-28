@@ -1,5 +1,5 @@
 import Flutter
-import RefinerSdk
+import RefinerSDK
 
 public class RefinerClass {
     static func initRefiner(call: FlutterMethodCall){
