@@ -18,4 +18,19 @@ class RefinerSdkMethodChannel extends RefinerSdkPlatform {
   Future<void> initRefiner({required String projectId}) async {
     return methodChannel.invokeMethod('initRefiner', projectId);
   }
+
+  @override
+  Future<void> trackEvent({required String eventName}) async {
+    return methodChannel.invokeMethod('trackEvent', eventName);
+  }
+
+  @override
+  Future<void> trackScreen({required String screenName}) async {
+    return methodChannel.invokeMethod('trackEvent', screenName);
+  }
+
+  @override
+  Future<void> resetUser() async {
+    return methodChannel.invokeMethod('resetUser');
+  }
 }

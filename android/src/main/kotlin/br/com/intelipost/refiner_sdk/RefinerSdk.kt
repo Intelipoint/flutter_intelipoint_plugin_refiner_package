@@ -13,10 +13,10 @@ import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.plugin.common.MethodChannel.Result
 import io.flutter.plugin.common.PluginRegistry.Registrar
 
-class RefinerSdk: FlutterPlugin, MethodCallHandler, ActivityAware {
-  private lateinit var channel : MethodChannel
-  private lateinit var context: Context
-  private var activity: Activity? = null;
+class RefinerSdk : FlutterPlugin, MethodCallHandler, ActivityAware {
+    private lateinit var channel: MethodChannel
+    private lateinit var context: Context
+    private var activity: Activity? = null;
 
     override fun onDetachedFromActivity() {
         activity = null;
@@ -34,28 +34,23 @@ class RefinerSdk: FlutterPlugin, MethodCallHandler, ActivityAware {
         activity = null;
     }
 
-    // companion object {
-    //   @JvmStatic
-    //   fun registerWith(registrar: Registrar) {
-    //     val channel = MethodChannel(registrar.messenger(), "refiner_sdk")
-    //     channel.setMethodCallHandler(FlutterMapboxTurnByTurnPlugin())
-    //   }
-    // }
-
-  override fun onAttachedToEngine(@NonNull flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
-    channel = MethodChannel(flutterPluginBinding.binaryMessenger, "refiner_sdk")
-    channel.setMethodCallHandler(this)
-    context = flutterPluginBinding.applicationContext
-  }
-
-  override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
-    when(call.method){
-        "initRefiner" -> RefinerClass.initRefiner(call, context)
-        "identifyUser" -> RefinerClass.identifyUser(call)
+    override fun onAttachedToEngine(@NonNull flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
+        channel = MethodChannel(flutterPluginBinding.binaryMessenger, "refiner_sdk")
+        channel.setMethodCallHandler(this)
+        context = flutterPluginBinding.applicationContext
     }
-  }
 
-  override fun onDetachedFromEngine(@NonNull binding: FlutterPlugin.FlutterPluginBinding) {
-    channel.setMethodCallHandler(null)
-  }
+    override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
+        when (call.method) {
+            "initRefiner" -> RefinerClass.initRefiner(call, context)
+            "identifyUser" -> RefinerClass.identifyUser(call)
+            "trackEvent" -> RefinerClass.trackEvent(call)
+            "trackScreen" -> RefinerClass.trackScreen(call)
+            "resetUser" -> RefinerClass.resetUser()
+        }
+    }
+
+    override fun onDetachedFromEngine(@NonNull binding: FlutterPlugin.FlutterPluginBinding) {
+        channel.setMethodCallHandler(null)
+    }
 }

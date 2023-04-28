@@ -16,6 +16,12 @@ public class SwiftRefinerSdk: NSObject, FlutterPlugin {
         RefinerClass.initRefiner(call: call)
       case "identifyUser":
         RefinerClass.identifyUser(call: call)
+      case "trackEvent":
+        RefinerClass.trackEvent(call: call)
+      case "trackScreen":
+        RefinerClass.trackScreen(call: call)
+      case "resetUser":
+        RefinerClass.resetUser()
       default:
         result(false);
     }

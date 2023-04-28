@@ -16,4 +16,11 @@ abstract class RefinerSdkPlatform extends PlatformInterface {
   Future<void> initRefiner({required String projectId});
 
   Future<void> identifyUser({required RefinerUser user});
+
+  Future<void> trackEvent({required String eventName});
+
+  Future<void> trackScreen({required String screenName});
+
+  Future<void> resetUser();
+
 }

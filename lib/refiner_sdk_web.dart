@@ -10,3 +10,13 @@ void identifyUser({required RefinerUser user}) {
 void initRefiner({required String projectId}) {
   js.context.callMethod('initRefiner', [projectId]);
 }
+
+void trackScreen({required String screenName}) {
+  js.context.callMethod('trackScreen', [screenName]);
+}
+
+void trackEvent({required String eventName}) {
+  js.context.callMethod('trackScreen', [eventName]);
+}
+
+void resetUser() => js.context.callMethod('resetUser');

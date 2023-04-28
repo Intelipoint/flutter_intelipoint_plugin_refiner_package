@@ -9,4 +9,16 @@ class RefinerSdk {
   static Future<void> identifyUser({required RefinerUser user}) {
     return RefinerSdkPlatform.instance.identifyUser(user: user);
   }
+
+  static Future<void> trackEvent({required String eventName}) {
+    return RefinerSdkPlatform.instance.trackEvent(eventName: eventName);
+  }
+
+  static Future<void> trackScreen({required String screenName}) {
+    return RefinerSdkPlatform.instance.trackScreen(screenName: screenName);
+  }
+
+  static Future<void> resetUser() {
+    return RefinerSdkPlatform.instance.resetUser();
+  }
 }
