@@ -30,7 +30,7 @@ RefinerPackage.identifyUser(user: refinerUser);
 
 ```RefinerSdk.resetUser()```
 
-### Web Docs:
+### Required on Web:
 
 Add this script to your index.html inside the <head> tag:
 
