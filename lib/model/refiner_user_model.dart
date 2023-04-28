@@ -1,15 +1,17 @@
 class RefinerUser {
-  String? userId;
-  Map<String, String>? userTraits;
+  const RefinerUser({
+    required this.userId,
+    required this.userTraits,
+  });
 
-  RefinerUser({required this.userId, required this.userTraits});
+  final String? userId;
+  final Map<String, String>? userTraits;
 
-  Map<String, dynamic> toJson() {
-    return {'userId': userId, 'userTraits': userTraits};
-  }
+  Map<String, dynamic> toJson() => {'userId': userId, 'userTraits': userTraits};
 
   Map<String, String> toWebAppJson() {
-    Map<String, String> usr = {};
+    final usr = <String, String>{};
+
     userTraits!.forEach((key, value) => usr[key] = value.toString());
     usr['id'] = userId!;
 

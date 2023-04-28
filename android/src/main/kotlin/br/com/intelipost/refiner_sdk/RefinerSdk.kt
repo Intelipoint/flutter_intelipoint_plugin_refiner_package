@@ -1,6 +1,6 @@
-package com.example.refiner_package
+package br.com.intelipost.refiner_sdk
 
-import com.example.refiner_class.RefinerClass
+import br.com.intelipost.refiner_class.RefinerClass
 import androidx.annotation.NonNull
 import android.app.Activity
 import android.content.Context
@@ -13,7 +13,7 @@ import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.plugin.common.MethodChannel.Result
 import io.flutter.plugin.common.PluginRegistry.Registrar
 
-class RefinerPackagePlugin: FlutterPlugin, MethodCallHandler, ActivityAware {
+class RefinerSdk: FlutterPlugin, MethodCallHandler, ActivityAware {
   private lateinit var channel : MethodChannel
   private lateinit var context: Context
   private var activity: Activity? = null;
@@ -37,13 +37,13 @@ class RefinerPackagePlugin: FlutterPlugin, MethodCallHandler, ActivityAware {
     // companion object {
     //   @JvmStatic
     //   fun registerWith(registrar: Registrar) {
-    //     val channel = MethodChannel(registrar.messenger(), "refiner_package")
+    //     val channel = MethodChannel(registrar.messenger(), "refiner_sdk")
     //     channel.setMethodCallHandler(FlutterMapboxTurnByTurnPlugin())
     //   }
     // }
 
   override fun onAttachedToEngine(@NonNull flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
-    channel = MethodChannel(flutterPluginBinding.binaryMessenger, "refiner_package")
+    channel = MethodChannel(flutterPluginBinding.binaryMessenger, "refiner_sdk")
     channel.setMethodCallHandler(this)
     context = flutterPluginBinding.applicationContext
   }

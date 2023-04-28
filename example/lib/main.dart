@@ -3,8 +3,8 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 
-import 'package:refiner_package/model/refiner_user_model.dart';
-import 'package:refiner_package/refiner_package.dart';
+import 'package:refiner_sdk/model/refiner_user_model.dart';
+import 'package:refiner_sdk/refiner_sdk.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,10 +25,10 @@ class _MyAppState extends State<MyApp> {
   }
 
   Future<void> initRefiner() async {
-    RefinerUser user = RefinerUser(userId: 'YOUR_CUSTOM_USER_ID', userTraits: {'email': 'YOUR_CUSTOM_TRAITS'});
+    RefinerUser user = const RefinerUser(userId: 'YOUR_CUSTOM_USER_ID', userTraits: {'email': 'YOUR_CUSTOM_TRAITS'});
     try {
-      RefinerPackage.initRefiner(projectId: 'YOUR_PROJECT_ID');
-      RefinerPackage.identifyUser(user: user);
+      RefinerSdk.initRefiner(projectId: 'YOUR_PROJECT_ID');
+      RefinerSdk.identifyUser(user: user);
     } on Exception {
       throw Exception('Failed to init Refiner');
     }

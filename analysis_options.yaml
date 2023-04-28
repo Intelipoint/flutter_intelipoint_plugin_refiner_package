@@ -1,4 +1,69 @@
 include: package:flutter_lints/flutter.yaml
 
+analyzer:
+  errors:
+    non_constant_identifier_names: ignore
+    missing_required_param: error
+    missing_return: error
+    todo: ignore
+  exclude:
+    - bin/cache/**
+    - lib/**/*.g.dart
+    - test/**/*.mocks.dart
+    - tool/grind.dart
+    - assets/config
+
+linter:
+  # Instead of disabling a lint rule for the entire project in the
+  # section below, it can also be suppressed for a single line of code
+  # or a specific dart file by using the `// ignore: name_of_lint` and
+  # `// ignore_for_file: name_of_lint` syntax on the line or in the file
+  # producing the lint.
+  rules:
+    always_declare_return_types: true
+    avoid_positional_boolean_parameters: true
+    avoid_returning_null: true
+    avoid_returning_this: true
+    avoid_shadowing_type_parameters: true
+    avoid_types_as_parameter_names: true
+    avoid_types_on_closure_parameters: true
+    await_only_futures: true
+    camel_case_types: true
+    directives_ordering: true
+    empty_catches: true
+    file_names: true
+    hash_and_equals: true
+    no_duplicate_case_values: true
+    non_constant_identifier_names: true
+    omit_local_variable_types: true
+    one_member_abstracts: true
+    prefer_final_fields: true
+    prefer_final_locals: true
+    prefer_if_null_operators: true
+    prefer_interpolation_to_compose_strings: true
+    prefer_mixin: true
+    prefer_relative_imports: true
+    prefer_single_quotes: true # Uncomment to enable the `prefer_single_quotes` rule
+    sort_child_properties_last: true
+    unawaited_futures: true
+    unnecessary_brace_in_string_interps: true
+    unnecessary_lambdas: true
+    unnecessary_await_in_return: true
+    unrelated_type_equality_checks: true
+    use_setters_to_change_properties: true
+    use_to_and_as_if_applicable: true
+    valid_regexps: true
+    avoid_void_async: true
+    use_super_parameters: true
+    library_private_types_in_public_api: false
+
+    # Enforce these:
+    no_leading_underscores_for_local_identifiers: false
+    library_prefixes: false
+    constant_identifier_names: false
+    avoid_classes_with_only_static_members: false
+    avoid_print: false
+    use_build_context_synchronously: false
+
 # Additional information about this file can be found at
 # https://dart.dev/guides/language/analysis-options

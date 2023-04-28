@@ -1,9 +1,9 @@
 #
 # To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html.
-# Run `pod lib lint refiner_package.podspec` to validate before publishing.
+# Run `pod lib lint refiner_sdk.podspec` to validate before publishing.
 #
 Pod::Spec.new do |s|
-  s.name             = 'refiner_package'
+  s.name             = 'refiner_sdk'
   s.version          = '0.0.1'
   s.summary          = 'A new Flutter plugin project.'
   s.description      = <<-DESC
@@ -15,7 +15,7 @@ A new Flutter plugin project.
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
   s.dependency 'Flutter'
-  s.dependency 'RefinerSDK'
+  s.dependency 'RefinerSdk'
   s.platform = :ios, '12.0'
 
   # Flutter.framework does not contain a i386 slice.

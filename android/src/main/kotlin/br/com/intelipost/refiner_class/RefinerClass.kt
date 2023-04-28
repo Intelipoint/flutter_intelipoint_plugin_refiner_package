@@ -1,4 +1,4 @@
-package com.example.refiner_class
+package br.com.intelispot.refiner_class
 
 import androidx.annotation.NonNull
 

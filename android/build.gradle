@@ -1,4 +1,4 @@
-group 'com.example.refiner_package'
+group 'br.com.intelipost.refiner_sdk'
 version '1.0-SNAPSHOT'
 
 buildscript {
