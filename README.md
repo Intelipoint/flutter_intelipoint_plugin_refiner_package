@@ -2,13 +2,6 @@
 <br />
 <div align="center">
   <img src="https://i.imgur.com/AN5obLQ.png" alt="Logo" width="200" height="200">
-
-<h3 align="center">Pegaki app</h3>
-  <p align="center">
-    Descrições de arquitetura e implementação em alto nível
-    <br />
-    <br />
-  </p>
 </div>
 
 # Intelipoint Refiner SDK
