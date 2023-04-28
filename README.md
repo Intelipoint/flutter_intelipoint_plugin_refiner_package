@@ -2,6 +2,7 @@
 <br />
 <div align="center">
   <img src="https://i.imgur.com/AN5obLQ.png" alt="Logo" width="200" height="200">
+  <img src="https://media.licdn.com/dms/image/C4D0BAQF0ZGttmUIvlA/company-logo_200_200/0/1624866438437?e=2147483647&v=beta&t=KQQR-shX9Xo1JACSP2ojRg9CM0UKYx0cF2lNbUrRxmQ" alt="Logo" width="200" height="200">
 </div>
 
 # Intelipoint Refiner SDK
