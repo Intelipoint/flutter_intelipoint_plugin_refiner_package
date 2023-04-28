@@ -1,7 +1,6 @@
 name: refiner_sdk
 description: Flutter Refiner SDK for iOS, Android and Web
 version: 0.0.3
-homepage:
 
 environment:
   sdk: '>=2.18.6 <3.0.0'
@@ -25,6 +24,3 @@ flutter:
         pluginClass: RefinerSdk
       ios:
         pluginClass: RefinerSdk
-      web:
-        pluginClass: RefinerSdk
-        fileName: refiner_sdk.dart
