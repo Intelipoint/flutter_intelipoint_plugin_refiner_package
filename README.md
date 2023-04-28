@@ -32,7 +32,7 @@ RefinerPackage.identifyUser(user: refinerUser);
 
 ### Required on Web:
 
-Add this script to your index.html inside the <head> tag:
+Add this script to your index.html inside head tag:
 
   ```
   <script type="text/javascript">
