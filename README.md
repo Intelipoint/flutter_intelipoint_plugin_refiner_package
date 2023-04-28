@@ -7,9 +7,9 @@
 
 # Intelipoint Refiner SDK
 
-##### Web Docs:
+### Web Docs:
 
-Add this script to your index.html inside head:
+Add this script to your index.html inside the <head> tag:
 
   ```
   <script type="text/javascript">
