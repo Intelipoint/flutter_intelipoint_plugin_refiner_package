@@ -27,4 +27,4 @@ flutter:
         pluginClass: RefinerSdk
       web:
         pluginClass: RefinerSdk
-        fileName: refiner_sdk_web.dart
+        fileName: refiner_sdk.dart

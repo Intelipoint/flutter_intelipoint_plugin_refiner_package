@@ -1,6 +1,6 @@
 import 'dart:js' as js;
 
-import 'model/refiner_user_model.dart';
+import '../model/refiner_user_model.dart';
 
 void identifyUser({required RefinerUser user}) {
   final obj = js.JsObject.jsify(user.toWebAppJson());
@@ -9,10 +9,6 @@ void identifyUser({required RefinerUser user}) {
 
 void initRefiner({required String projectId}) {
   js.context.callMethod('initRefiner', [projectId]);
-}
-
-void trackScreen({required String screenName}) {
-  js.context.callMethod('trackScreen', [screenName]);
 }
 
 void trackEvent({required String eventName}) {
