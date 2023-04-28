@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.refiner_package_example">
+    package="br.com.intelipost.refiner_sdk_example">
    <application
-        android:label="refiner_package_example"
+        android:label="refiner_sdk_example"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

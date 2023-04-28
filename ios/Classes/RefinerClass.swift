@@ -23,4 +23,31 @@ public class RefinerClass {
             print(error.localizedDescription);
         }
     }
+
+
+    static func trackEvent(call: FlutterMethodCall){
+        let eventName = call.arguments as! String;
+        do {
+            try Refiner.instance.trackEvent(name: eventName)
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+
+    static func trackScreen(call: FlutterMethodCall){
+        let screenName = call.arguments as! String;
+        do {
+            try Refiner.instance.trackScreen(name: screenName)
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+
+    static func resetUser() {
+        do {
+            try Refiner.instance.resetUser();
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
 }
