@@ -7,26 +7,26 @@
 
 # Intelipoint Refiner SDK
 
-- Init Refiner with the projectId
+#### Init Refiner with the projectId
 
 ```RefinerSdk.initRefiner(projectId: 'YOUR-PROJECT-ID')```
 
-- Identify the user with its corresponding ID and UserTraits
+#### Identify the user with its corresponding ID and UserTraits
 
 ```
 final refinerUser = RefinerUser(userId: userInfo.username, userTraits: userTraitsJson);
 RefinerPackage.identifyUser(user: refinerUser);
 ```
 
-- Track event
+#### Track event
 
 ```RefinerSdk.trackEvent(eventName: 'eventName')```
 
-- Track screen (not supported on Web)
+#### Track screen (not supported on Web)
 
 ```RefinerSdk.trackScreen(screenName: 'screenName')```
 
-- Reset user
+#### Reset user
 
 ```RefinerSdk.resetUser()```
 
